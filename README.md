@@ -3,7 +3,7 @@ Label:
 ![GitHub Logo](/Images/LabelConfig.png)
 
 Slider:
-![GitHub Logo](/Images/LabelSlider.png)
+![GitHub Logo](/Images/SliderConfig.png)
 
 ## Installation
 
