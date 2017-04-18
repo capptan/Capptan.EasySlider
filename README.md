@@ -11,4 +11,4 @@ pod 'Capptan.EasySlider', :git => 'https://github.com/faustocapptan/Capptan.Easy
 
 ## Example
 
-https://github.com/capptan/EasySliderExample
+[a link](https://github.com/capptan/EasySliderExample)
