@@ -8,3 +8,8 @@ Slider:
 ## Installation
 
 pod 'Capptan.EasySlider', :git => 'https://github.com/faustocapptan/Capptan.EasySlider'
+
+## Example
+
+https://github.com/capptan/EasySliderExample
+
