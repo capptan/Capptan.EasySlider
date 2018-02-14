@@ -225,7 +225,7 @@ CGFloat lastSelectedValue = 0;
     }
     
     if([self.ticksListener respondsToSelector:@selector(tgpTouchesEnded:)]) {
-        printf("testeee ended");
+        [self.ticksListener tgpTouchesEnded: self.value];
     }
     
 }
