@@ -34,8 +34,8 @@
 - (void)tgpTicksDistanceChanged:(CGFloat)ticksDistance sender:(id)sender;
 
 @optional
-- (void)tgpValueChanged:(int)value;
+- (void)tgpValueChanged:(int)value: (int) viewTag;
 
-- (void)tgpTouchesEnded:(int)value;
+- (void)tgpTouchesEnded:(int)value: (int) viewTag;
 
 @end

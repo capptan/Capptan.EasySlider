@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name = "Capptan.EasySlider"
-  spec.version = "1.0.1"
+  spec.version = "1.0.2"
   spec.summary = "Easy Slider"
   spec.homepage = "http://capptan.com.br"
   spec.license = { type: 'MIT', file: 'LICENSE' }

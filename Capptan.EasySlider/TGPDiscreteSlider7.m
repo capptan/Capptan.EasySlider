@@ -221,13 +221,12 @@ CGFloat lastSelectedValue = 0;
 - (void)sendActionsForControlEvents {
     // Automatic UIControlEventValueChanged notification
     if([self.ticksListener respondsToSelector:@selector(tgpValueChanged:)]) {
-        [self.ticksListener tgpValueChanged:self.value];
+        [self.ticksListener tgpValueChanged: self.value :self.tag];
     }
-    
+
     if([self.ticksListener respondsToSelector:@selector(tgpTouchesEnded:)]) {
-        [self.ticksListener tgpTouchesEnded: self.value];
+        //[self.ticksListener tgpTouchesEnded: self.value];
     }
-    
 }
 
 #pragma mark TGPDiscreteSlider7
@@ -632,7 +631,8 @@ CGFloat lastSelectedValue = 0;
                                      ? UIControlEventTouchUpInside
                                      : UIControlEventTouchUpOutside)
                            forEvent:event];
- lastSelectedValue = self.value;
+    lastSelectedValue = self.value;
+    [self.ticksListener tgpTouchesEnded:self.value : self.tag];
 }
 
 - (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
