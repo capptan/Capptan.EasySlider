@@ -58,9 +58,31 @@
     [self layoutTrack];
 }
 
+- (void)resetUpLabel {
+    dispatch_time_t delay = dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_SEC * 0.3);
+    dispatch_after(delay, dispatch_get_main_queue(), ^(void){
+        //[self layoutTrack];
+        [self.upLabels enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            int teste = idx;
+            teste = teste - 10;
+            if( _value != teste) {
+                [self moveDown:obj withAlpha:0.f];
+            }
+        }];
+        [self.dnLabels enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            int teste = idx;
+            teste = teste - 10;
+            if( _value != teste) {
+                [self moveDown:obj withAlpha:0.f];
+            }
+        }];
+    });
+}
+
 - (void)setValue:(CGFloat)value {
     _value = value;
     [self dockEffect:self.animationDuration];
+    [self resetUpLabel];
 }
 
 - (void)setUpFontName:(NSString *)upFontName {
